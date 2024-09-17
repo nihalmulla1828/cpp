@@ -1,0 +1,3177 @@
+
+
+FAQ:
+WHAT IS LANGUAGE?
+==>A lang is used to communicate.
+==>Language is a mode of communication that is used to share ideas, opinions with each other.we need a language that is understandable by both communicators.
+==>For general communication,use general lang like hindi, english etc
+
+FAQ:
+What is Computer Language?
+==>A lang is used to communicate with the computer m/c.
+ ==>But why?
+==>instead of performing complex operation manually,it is better to interact with computer /m/c....Within fraction of sec we will get answer.Time and human effort will get reduced.
+
+==>But we can communicate with computer in that language, which is understandable to the computer.
+i.e machine lang/binary lang.
+==>for that we need to pass intructions to a computer  in a machine/binary code only.
+
+FAQ:
+Can any1 pass instructions in binary lang?
+==>no not possible.
+==>we cannot write applications in binary lang because of its  complex nature.
+so for that we have to first learn one programming lang.
+==>A programming language is a computer language that is used by programmers (developers) to communicate with computers. It is a set of instructions written in any specific language ( C, C++, Java, Python) to perform a specific task.
+
+==>using programming lang we are writing programs (source code). source code cannot communicate with computer directly because whatever instructions has written it is in english lang.computer cannot understand english. it understand only binary lang.1/0 ...
+
+FAQ:
+How to convert english statments to binary lang?
+==>Compiler is a predefined program/software responsible for conversion into binary languages.
+==>After compilation process, we can  pass input to the computer for processing the output. this is 
+the process of communication with the computer.
+
+ High-level programming language (HLL) -It is designed for developing user-friendly software programs and websites.
+This programming language requires a compiler or interpreter to translate the program into machine language (execute the program).
+Example: Java,  C#, C,C++, etc.
+A high-level language is further divided into two parts -
+	a)Procedural Oriented programming language
+	b)Object-Oriented Programming language
+ 
+FAQ:
+What is a compiler and interpreter?
+Compiler: A compiler translates code from a high-level programming language  into machine code before the program runs. The work of a Compiler is to transform the codes written in the programming language into machine code (format of 0s and 1s) so that computers can understand.
+C, C++, C#, etc are programming languages that are compiler-based.
+
+Interpreter: An interpreter translates code written in a high-level programming language into machine code line-by-line as the code runs.It translates only one statement of the program at a time.
+Python, Ruby, Perl, MATLAB, etc are programming languages that are interpreter-based.
+
+==>A compiler is similar to an interpreter. However, a compiler is faster than an interpreter and translates the entire file at once. An interpreter reads the source program line by line and, therefore, is a slower process. 
+
+==================================================================================================
+FAQ:
+Using C lang what kinds of applications we can developed?
+ Standalone application/Desktop application
+==>application which provides services to a single user/client is called as standalone application
+==>application that is installed in our computer. browsing from internet requires to install chrome, VLC player.
+==>Doesnot requires need for a server or internet connection.
+ex-->AntiVirus,Calculator,notepad,Microsoft word,mobile -app,gaming,all programs which starts with main()
+C lang is used in standalone application/desktop application
+====================================================================================
+Platform Dependency...
+==>Platform dependent  refers to applications that run under only one operating system .
+==>On which platform we compile the application,on the same platform only we can run the application
+========================================================================================================
+
+CONVERSION OF .C TO.EXE
+
+C sourcefile----->	compiler  ----> object file ---> linker ---> executable file
+demo.c			                  demo.obj			            demo.exe
+COMPILATION PHASE 						   EXECUTION/RUNNING PHASE 
+
+Source file-->The file in which source code(program) is written.
+
+Object File
+==>source code is provided to language translator like compiler which converts it into m/c understandable code which is called m/c code 	or object code.
+==>object file is in binary format(0,1 format)
+==>object file is in machine level lang/not in human readble format 
+  compilation process-->the process of converting error free source code into object code
+
+Linker
+==>linker helps in executing the object file.The output of the linker is the executable file.
+======================================================================================
+IDENTIFIER
+
+==>Identifier is a name given to the entity/container(variable,array,string,function,structure) .
+==>Identifiers are userdefined words.
+==>An identifier can be composed of letters such as uppercase, lowercase letters, underscore, digits, but the starting letter should be either an alphabet or an underscore.
+
+Rules for constructing C identifiers
+
+1)The first character of an identifier should be either an alphabet or an underscore, and then it can be followed by any of the character, digit, or underscore.
+2)It should not begin with any numerical digit.
+3)In identifiers, both uppercase and lowercase letters are distinct. Therefore, we can say that identifiers are case sensitive.
+4)Commas or blank spaces cannot be specified within an identifier.
+5)Keywords cannot be represented as an identifier.
+6)The length of the identifiers should not be more than 31 characters.
+7)Identifiers should be written in such a way that it is meaningful, short, and easy to read.
+==============================================================================
+
+VARIABLE
+==>For every computer application we need to store information at a particular location. 
+==>every m/c is having memory locations,every memory location is identified by an address(+ve integer value)
+==>A name given to the memory location in which data of different types can be stored and retrieves it when required is called as variable.
+
+syntax:
+data_type variable_name = value;    // defining single variable
+            or
+data_type variable_name1, variable_name2;    // defining multiple variable
+
+There are 3 aspects of defining a variable:
+Variable Declaration
+Variable Initialization
+
+1. C Variable Declaration
+==>Variable declaration in C tells the compiler about the existence of the variable with the given name and data type.
+==>At declaration,compiler automatically allocates the memory for it.
+
+2. C Variable Initialization
+Initialization of a variable is the process where the user assigns some meaningful value to the variable
+A  variable will contain some random garbage value till it is not initialized.
+
+int x;//declaration
+x=10;//initilization
+int x=20;//declaration+initilization
+====================================================================================
+Rules for Naming Variables in C
+
+You can assign any name to the variable as long as it follows the following rules:
+
+A variable name must only contain alphabets, digits, and underscore.
+A variable name must start with an alphabet or an underscore only. It cannot start with a digit.
+No whitespace is allowed within the variable name.
+A variable name must not be any reserved word or keyword.
+
+int BREAK;//valid
+int Break;//valid
+int break;//invalid
+int break1=1,2;//not valid
+
+==============================================================================================
+
+=======================================================================================
+KEYWORDS
+==>keywords is a predefined words whose meaning and functionality is already predefine and
+ as a user we cannot change any one of those...
+==>keywords always use in small letters
+BREAK//error->it is no longer a keyword
+==>we cannot use keywords as an identifiers.
+=======================================================================
+Keyword														Identifier
+Keyword is a pre-defined word.						The identifier is a user-defined word
+It must be used in a lowercase letter.				It can be written in both lowercase and uppercase letters.
+Its meaning is pre-defined in the c compiler.			Its meaning is not defined in the c compiler.
+
+=================================================================================
+Data Types in C
+A data type specifies the type of data that a variable can store such as integer, floating, character, etc.
+The data types in C can be classified as follows
+
+Primitive Data Types::Primitive data types are the most basic data types that are used for representing simple values such as integers, float, characters, etc.
+User Defined Data Types	::The user-defined data types are defined by the user himself.ex:Array,pointer
+
+============================================================================================
+
+DATATYPES    			KEYWORD    		 16bit      		 32/64bit     		format specifier
+INTEGER			   	 int	     				2bytes       		4bytes    		 	%d
+-32768 to 32767
+
+FLOAT					float	    			 4 bytes	  		4bytes    			%f
+
+DOUBLE					double        			  8bytes	  		8bytes    			%lf
+(long float)
+
+CHARACTER				char         			1byte         	         1        				 %c
+'A'-'Z','a'-'z',
+'0'--'9','#'
+256 characters
+
+1--->int
+'1'-->char
+1.0--->double every decimal number is by default double
+1.0f-->float
+"1"-->string
+
+
+
+=======================================================================================
+Format Specifier:
+==>The format string determines the format of the input and output.
+==>format specifier tells which type of data to be accepted from user or display on console
+
+============================================================================
+============================================================================
+C Operators
+An operator is simply a symbol that is used to perform operations on operands.
+
+There are 3 types of operators depending on no of operands
+Unary operators--> those operators which takes only 1 operand
+
+a)unary minus operator(-) is used for negation.
+The minus operator ( – ) changes the sign of its argument. A positive number becomes negative, and a negative number becomes positive.
+ 
+int a=5;
+a = -a;
+a =-5
+
+int a=-5;
+a=-a;
+a=-(-5)
+a=5
+=====================================================================================
+b)increment operator(++)
+The increment operator ( ++ ) is used to increment the value of the variable by 1. The increment can be done in two ways:
+
+int a=10;
+	a++;//a=a+1 //a=10+1 //a=11
+	++a;//a=a+1//a=11+1 //a=12
+
+Increment operator is divided into 2 types
+1)pre increment operator(increment,assign)
+int a=10;
+int b;
+b=++a;
+//a=11
+//b=11
+
+2)post increment operator(assign,increment)
+int a=10;
+int b;
+b=a++;
+//a=11
+//b=10
+
+c)decrement operator(--)
+It is used to decrement the value of the variable by 1. The decrement can be done in two ways:
+
+int a=10;
+a--;//a=a-1 //a=10-1 //a=9
+--a;//a=a-1//a=9-1 //a=8
+
+decrement operator is divided into 2 types
+1)pre decrement operator(decrement,assign)
+int a=10;
+int b;
+b=--a;
+//a=9
+//b=9
+
+2)post decrement operator(assign,decrement)
+int a=10;
+int b;
+b=a--;
+//a=9
+//b=10
+
+d)sizeof()
+This operator returns the size of its operand, in bytes.
+its a keyword
+
+int a=10;
+sizeof(a)--->4 bytes
+
+sizeof(double)-->8 bytes
+
+char ch='x';
+sizeof(ch)-->1 byte
+
+sizeof(100)-->4 bytes
+
+sizeof(1.1)--->8 bytes
+every decimal number is by default double 
+
+sizeof(1.1f)--->4 bytes
+=======================================================================
+2)binary operators--->requires 2 operands
+binary operators is divided into 4 types
+
+1)Arithmetic operators(+,-,/,*,%)
+
+Modulus(%)
+Calculate the remainder when the first operand is divided by the second operand.	
+x % y
+
+10/2-->5   / gives quotient part after division
+10%2-->0   % gives remainder part after division
+---------------------------------------------------------------------------------------------------------------------
+
+ The % modulus operator cannot be applied to floating-point numbers i.e. float or double. If you try to use the modulo operator with floating-point constants or variables, the compiler will produce an error.
+10.0f %2-->error
+-----------------------------------------------------------------------------------------------------------------------------
+% gives numerator as result when numerator is less than denominator
+2%10-->2
+100%110-->100
+--------------------------------------------------------------------------------------------------------
+
+2)Relational operator      >,<,<=,>=,==(comparison),!=(not=)
+==>In C, relational operators are the symbols that are used for comparison between two values .
+==>The result that we get after the relational operation is a boolean value, that tells whether the comparison is true or false.
+==> Relational operators are mainly used in conditional statements and loops to check the conditions in C programming.
+==>Relational operators return 1 if expression is true and return 0 if expression is false
+
+nonzero--->other than 0--->true-->1
+-5-->other than 0--->true--->1
+zero-->0->false-->0
+
+int x=5>2;
+x=1
+
+int a=10,b=2;
+int c=   a==b;
+c=0
+
+3)Assignment operator(=)-->Assignment operators are used for assigning value to a variable. The left side operand of the assignment operator is a variable and right side operand of the assignment operator is a value. The value on the right side must be of the same data-type of the variable on the left side
+int a = 10;//initilization
+
+10=a;//not valid
+
+c=a+b;//valid
+
+a+b=c;//not valid(expression cannot be used on lhs of assignment operator)
+
+
+4)Logical operators(&&(AND),||(OR) !(NOT)
+ Logical Operators returns either 0 or 1, it depends on whether the expression result is true or false.
+
+We have 3 logical operators in the C language:
+
+Logical AND ( && )
+Logical OR ( || )
+Logical NOT ( ! )
+
+Types of Logical Operators
+1. Logical AND Operator ( && )
+If both operands are non zero then the condition becomes true(1). Otherwise, the result has a value of 0(false). 
+2. Logical OR Operator ( || )
+The condition becomes true if any one of them is non-zero. Otherwise, it returns false i.e., 0 as the value.
+3. Logical NOT Operator ( ! )
+If the condition is true then the logical NOT operator will make it false and vice-versa. 
+	
+		&&		||
+0 0		0		0
+0 1		0		1
+1 0 		0		1
+1 1		1		1
+
+
+(1&&5) || (1||2)
+1 || 1
+1
+
+==================================================================
+Constant variable
+==>The variable declare with const keyword is called as constant variable
+==>value of constant variable cannot be changed
+const int a=10;
+a++; // a=a+1 //a=10+1 //a=11---->error
+a=a+1;
+
+const int b=20;
+int c=b+2;
+
+==>constant variable should be initialized at the time of declaration
+int a;
+a=10;//allowed
+
+const int a;
+a=10;//not allowed
+
+const int a=10;//allowed
+
+==>we can use the value of a constant variable but we cannot change the value.
+
+int a=10;
+a++;//a=a+1 //a=10+1 //a=11
+
+const int a=10;
+a++;//error //a=a+1 // a=10+1 //a=11 //not possible
+
+const int a=20;
+int b=a+1;//allowed
+
+value of constant variable can be used on rhs of assignment operator
+constant variable cannot be used on LHS of asssignment operator
+
+
+const int a=30;
+int b=a*2;//no error
+a++;//error a=a+1 
+a*2;//no error
+a=a*2;//error
+------------------------------------------------------------------------------------------------------------------------
+
+
+scanf()-->to accept values/inputs from the user
+printf()-->to display values/output on the console/output screen
+
+
+
+#include<stdio.h>
+int main()
+{
+	int radius;
+	float area;
+	printf("enter radius");
+	scanf("%d",&radius);
+	area = 3.142f * radius * radius;
+	printf("area of circle=%f",area);
+}
+-----------------------------------------------------------------------------------------------------
+Typecasting
+
+==>Conversion of one datatype into another datatype is called as typecasting
+
+int/int-->int    		5/2-->2
+int/float-->float 		5/2.0f-->2.5
+float/int-->float 		5.0f/2-->2.5
+float/float-->float 	5.0f/2.0f-->2.5
+
+There are 2 types of typecasting
+1)implicit typecasting-->typecasting done by compiler implicitly
+2)explicit typecasting-->typecasting done by programmer explicitly
+
+#include<stdio.h>
+int main()
+{
+	int a=5,b=2;
+	int c = a/b;
+	printf("value of c=%d",c);
+}
+
+
+
+#include<stdio.h>
+int main()
+{
+	int a=5,b=2;
+	float c = a/b;
+	//float c=2(int)
+	printf("value of c=%f",c);
+}
+==>with implicit typecasting,value is getting truncated
+==>we are not getting exact value thats why use explicit typecasting for getting exact  answer
+
+Explicit Typecasting
+==>Here the user can typecast the result to make it of a particular data type. (type) expression
+Type indicated the data type to which the final result is converted. 
+
+#include<stdio.h>
+int main()
+{
+	int a=5,b=2;
+	float c = (float)a/b;
+	float c=(float)2
+	printf("value of c=%f",c);//2.5
+}
+
+#include <stdio.h>
+ int main() {
+  float a = 1.5;
+  int b = (int)a;
+ 
+  printf("a = %f\n", a);
+  printf("b = %d\n", b);
+}
+
+wap to accept 5 marks(int) of a student from the user and calculate 
+average(float) of that student
+#include<stdio.h>
+int main()
+{
+	int a, b, c, d, e, sum;
+	float avg;
+	printf("enter marks");
+	scanf("%d%d%d%d%d", &a, &b, &c, &d, &e);
+	sum = a + b + c + d + e;
+	avg = sum / 5;
+	printf("Average is = %f", avg);
+	
+}
+
+==========================================================
+
+//width specification-->restrict the compiler in accepting no of inputs from the user
+//scanf("%wd",&variablename);
+
+#include<stdio.h>
+int main()
+{
+	int num,rem1,rem2,rem3,sum;
+	printf("accept 3 digit number\n");
+	scanf("%3d",&num);
+	printf("num=%d\n",num);
+	rem1=num%10;
+	num=num/10;
+	rem2=num%10;
+	num=num/10;
+	rem3=num%10;
+	num=num/10;
+	sum=rem1+rem2+rem3;
+	printf("sum=%d",sum);
+}
+========================================================================
+What is Character Arithmetic?
+==>Character arithmetic is used to implement arithmetic operations like addition, subtraction, multiplication, and division on characters in C language. 
+In character arithmetic character converts into an integer value to perform the task. For this ASCII value is used.
+
+0 to 255 Ascii  value range (ASCII(American standard code for information interchange)
+ VALUES-->integer constant) i.e 256 characters 
+
+'A'-->65
+'B'-->66
+' '-->32
+'0'-->48
+'1'-->49
+'a'-->97
+
+int main()
+{
+    char a = 'A';
+    char b = 'B';
+ 
+    printf("a = %c\n", a);
+    printf("b = %c\n", b);
+    printf("a + b = %c\n", a + b);
+}
+
+#include<stdio.h>
+int main()
+{
+	char ch = 'A';
+	printf("ASCII VALUE OF %c is %d", ch, ch);
+
+}
+
+#include<stdio.h>
+int main()
+{
+	char ch = '0';
+	printf("ASCII VALUE OF %c is %d", ch, ch);
+
+}
+#include<stdio.h>
+int main()
+{
+	char ch = ' ';
+	printf("ASCII VALUE OF %c is %d", ch, ch);
+
+}
+
+#include<stdio.h>
+int main()
+{
+	char ch = 'A';
+	printf("ASCII VALUE OF %c is %d",ch+1,ch+1);
+
+}
+
+}
+=========================================================================================
+
+RAM(PRIMARY STORAGE)
+MEMORY IS DIVIDED INTO THREE SECTION
+
+1)STACK SECTION
+2)HEAP SECTION
+3)DATA SECTION
+
+Types of Variables in C
+LOCAL VARIABLE
+A variable that is declared inside the function or block is called a local variable.
+1)local variable cannot be declared globally 
+2)initial value is garbage
+3)scope and lifetime is within the block/within the function
+4)storage is stack section
+
+==>lifetime means how long the variable exists in the memory
+==>scope means how long the variable can be accessed
+in local variable lifetime depends on scope of variable
+==>if scopes are different then two variables may have same name,but there addresses will be different
+#include<stdio.h>
+int main()
+{
+	int a=10;
+	 printf("%d",a);
+	 {
+		 int a=100;
+		 printf("%d",a);
+	 }
+	 printf("%d",a);
+}
+
+GLOBAL VARIABLE
+
+A variable that is declared outside the function or block is called a global variable.
+initial value is 0
+storage is data section
+lifetime is through out the program
+scope-->through out the program
+
+int value=20;//global variable  
+int main()
+{
+int value=10;//local variable 
+printf("%d", value);
+}
+local variable is having high priority over global variable  
+==>Two variables can have same name if scopes of two variables are different.
+==>no two variables can share memory location even if there names are same
+
+
+=====================================================
+
+
+Decision making statements
+==>The if-else statement in C is used to perform the operations based on some specific condition. The operations specified in if block are executed if and only if the given condition is true.
+
+==>whenever some statements will get executed depending on the condition, that condition may be  true/false,such statements is called as decision making statements
+
+There are the following variants of if statement in C language.
+If statement
+If-else statement
+If else-if ladder
+Nested if
+
+If Statement
+The if statement is used to check some given condition and perform some operations depending upon the correctness of that condition. It is mostly used in the scenario where we need to perform the different operations for the different conditions. 
+
+if(condition/expression)//AE,RE,LE,CONSTANT,character
+{	
+	//block of statements;
+}
+
+if the output of the expression is nonzero that means expression is true,if expression is true then
+ the statements inside if will get executed otherwise it will get skipped
+
+if(-5)//1,10,2+2,5<10,1&&1,'A'
+{
+		printf("hello");
+}
+output-->hello
+
+if(0)//7-7,0&&0,7>10
+{
+		printf("hello");
+}
+//output--->no output
+
+Program to find the largest number of the three.
+#include <stdio.h>  
+int main()  
+{  
+    int a, b, c;   
+     printf("Enter three numbers?");  
+    scanf("%d %d %d",&a,&b,&c);  
+    if(a>b && a>c)  
+    {  
+        printf("%d is largest",a);  
+    }  
+    if(b>a  && b > c)  
+    {  
+        printf("%d is largest",b);  
+    }  
+    if(c>a && c>b)  
+    {  
+        printf("%d is largest",c);  
+    }  
+    if(a == b && a == c)   
+    {  
+        printf("All are equal");   
+    }  
+}  
+------------------------------------------------------------------------------------------------------------
+If-else Statement
+The if-else statement is an extension to the if statement using which, we can perform two different operations, i.e., one is for the correctness of that condition, and the other is for the incorrectness of the condition. Here, we must notice that if and else block cannot be executed simiulteneously. 
+***if block can exist without else(if can be standlone)
+**there should not be any statements between if and else
+**else cannot be standalone,it always requires if block
+
+syntax:
+
+if(expression/condition)
+{
+	//block of statements;
+}
+else
+{
+	//block of statements;
+}
+---------------------------------
+#include<stdio.h>
+int main()
+{
+	if(0)
+	printf("hello");
+	printf("hi");
+}
+//hi
+=============================================
+#include<stdio.h>
+int main()
+{
+	if(1)
+	printf("hello");
+	printf("hi");
+}
+//hello hi
+=================================================
+==============================================
+#include <stdio.h>
+void main()
+{
+	int marks;
+	printf("enter agg marks\n");
+	scanf("%d",&marks);
+	if(marks>=60)
+	printf("you are eligible");
+	printf("good bye");
+}
+============================================================
+wap to accept 1 number and print whether the number is even or odd
+
+int main()
+{
+	int num;
+	printf("enter number");
+	scanf("%d",&num);
+	if(num%2==0) // if(num%2!=1) // if(!(num%2==1))
+	printf("even");
+	else
+	printf("odd");
+
+}
+
+---------------------------------------------------------
+
+#include<stdio.h>
+int main()
+{
+	int num;
+	printf("accept number\n");
+	scanf("%d",&num);
+	if(num>=1 && num<=100)
+	printf("in range");
+	else	
+	printf("not in range");
+}
+=================================================================
+#include<stdio.h>
+int main()
+{
+	char ch;
+	printf("accept character\n");
+	scanf("%c",&ch);
+	if(ch=='a'||ch=='e'||ch=='i'||ch=='o'||ch=='u')
+	printf("vowel");
+	else	
+	printf("not vowel");
+}
+=============================================================
+If else-if ladder Statement
+The if-else-if ladder statement is an extension to the if-else statement. It is used in the scenario where there are multiple cases to be performed for different conditions. In if-else-if ladder statement, if a condition is true then the statements defined in the if block will be executed, otherwise if some other condition is true then the statements defined in the else-if block will be executed, at the last if none of the condition is true then the statements defined in the else block will be executed.
+
+syntax:
+if(condition1)
+{  
+//code to be executed if condition1 is true  
+}
+else  if(condition2)
+{  
+//code to be executed if condition2 is true  
+}  
+else if(condition3)
+{  
+//code to be executed if condition3 is true  
+}  
+...  
+else{  
+//code to be executed if all the conditions are false  
+}  
+
+----------------------------------------------------------------
+#include <stdio.h>  
+int main()  
+{  
+    int marks;   
+    printf("Enter your marks?");  
+    scanf("%d",&marks);   
+    if(marks > 85 && marks <= 100)  
+    {  
+        printf("Congrats ! you scored grade A ...");   
+    }  
+    else if (marks > 60 && marks <= 85)   
+    {  
+        printf("You scored grade B + ...");  
+    }  
+    else if (marks > 40 && marks <= 60)   
+    {  
+        printf("You scored grade B ...");  
+    }  
+    else if (marks > 30 && marks <= 40)   
+    {  
+        printf("You scored grade C ...");   
+    }  
+    else   
+    {  
+        printf("Sorry you are fail ...");   
+    }  
+}  
+
+ladder of if 
+#include <stdio.h>
+int main()
+{
+	int a,b;
+	printf("enter a and b\n");
+	scanf("%d%d",&a,&b); 5 50
+	if(a>b)
+	printf("%d is greater than %d ",a,b);
+	if(a==b)
+	printf("%d and %d are equal",a,b);
+	else
+	printf("%d is less than %d ",a,b);
+		 
+}
+-----------------------------------------------------------------------------
+Conditional Operator in C
+The conditional operator is also known as a ternary operator. The conditional statements are the decision-making statements which depends upon the output of the expression. It is represented by two symbols, i.e., '?' and ':'
+
+As conditional operator works on three operands, so it is also known as the ternary operator.
+
+The behavior of the conditional operator is similar to the 'if-else' statement as 'if-else' statement is also a decision-making statement.
+
+Syntax of a conditional operator
+Expression1 ?    expression2  :       expression3;  
+
+In the above syntax, the expression1 is a Boolean condition that can be either true or false value.
+If the expression1 results into a true value, then the expression2 will execute.
+If the expression1 returns false value then the expression3 will execute.
+
+
+#include<stdio.h>
+int main()
+{
+	int a, b;
+	printf("enter value of a and b\n");
+	scanf("%d%d", &a, &b); //10 20
+	int max = (a > b) ? 		a	:		b;
+	printf("maximum no =%d", max);
+
+} 
+
+#include<stdio.h>
+int main()
+{
+	int a, b;
+	printf("enter value of a and b\n");
+	scanf("%d%d", &a, &b);//50 200
+	(a > b) ? printf("%d is greater",a) : printf("%d is greater",b);
+
+}
+
+#include<stdio.h>
+int main()
+{
+	int a=5, b=2;
+	int c = a != b          ? a++        :            b++;
+	printf("%d %d %d", a, b, c); //625
+
+}
+
+
+
+----------------------------------------------------------------------------------------------------------------------------------------------
+
+nested if else--->one if-else is a part of another if-else is called as nested if-else.
+if(condition1)
+{
+	if(condition2)
+	{
+	}
+	else
+	{
+	}
+}
+else
+{
+	-=============
+}
+
+#include <stdio.h>
+int main()
+{
+	int a,b;
+	printf("enter a and b\n");
+	scanf("%d%d",&a,&b); 
+	if(a>=b)
+	{
+		if(a==b)
+		printf("%d and %d are equal",a,b);
+		else
+		printf("%d is greater than %d ",a,b);
+
+	}
+	else
+	printf("%d is less than %d ",a,b);
+		 
+}
+  
+---------------------------------------------------------------------------------------------
+switch statements/selection statements
+
+Switch case statement evaluates a given expression and based on the evaluated value(matching a certain condition), it executes the statements associated with it. Basically, it is used to perform different actions based on different conditions(cases). 
+
+
+switch(expression)
+{    
+case value1:    
+ //code to be executed;    
+ break;  //optional  
+case value2:    
+ //code to be executed;    
+ break;  //optional  
+......    
+    
+default:     
+ code to be executed if all cases are not matched;    
+}    
+Rules for switch statement in C language
+The switch expression must be of an integer or character type.
+The case value must be an integer or character constant.
+The case value can be used only inside the switch statement.
+The break statement in switch case is not compulsory. It is optional. If there is no break statement found in the case, all the cases will be executed present after the matched case. It is known as fall through the state of C switch statement.
+
+	if(6+6)//condition-->nonzero(12)-->TRUE
+	{
+		printf("hi");
+	}
+	//hi
+	if(6-6)//condition-->zero(0)-->false
+	{
+		printf("hi");
+	}
+	//no output
+
+	switch(6+6)//exact value-->12
+	{
+	case 13:printf("hi");
+	case 12:printf("bye");
+	}
+	//bye
+	switch(6-6)//exact value-->0
+	{
+	case 13:printf("hi");
+	case 0:printf("bye");
+	}
+	//bye
+
+
+==>switch expression cannot contain float and double constant and 
+variable name and string
+==>case value can not contain float and double constant and variable
+ and string
+==>case value should not be repeated
+
+Valid Switch		Invalid Switch		Valid Case		Invalid Case
+switch(x)		switch(1.1f)			case 3;			case 2.5;
+switch(x>y)		switch(x+2.5)		case 'a';			case x;
+switch(a+b-2)	switch("hi");		case 1+2;		
+									case 'x'>'y';		case 1,2,3;
+													case "hello"
+Functioning of switch case statement
+First, the expression specified in the switch statement is evaluated. This value is then matched one by one with the constant values given in the different cases. If a match is found, then all the statements specified in that case are executed along with the all the cases present after that case including the default statement when no break is specified. No two cases can have similar values. If the matched case contains a break statement, then all the cases present after that will be skipped, and the control comes out of the switch. Otherwise, all the cases following the matched case will be executed.
+
+Break Keyword:
+The "break" keyword is used within the code block of each case to terminate the switch statement prematurely. When the program encounters a "break" statement inside a case block, it immediately exits the switch statement, preventing the execution of subsequent case blocks. 
+
+
+Default Keyword:
+When none of the case constants match the evaluated expression, it operates as a catch-all case. If no matching case exists and a "default" case exists, the code block associated with the "default" case is run
+
+
+#include <stdio.h>
+int main()
+{
+	switch (6 + 2)
+	{
+	case 7:printf("hi");
+	case 8:printf("bye");
+	}
+}
+//bye
+==================================================
+#include <stdio.h>
+int main()
+{
+	switch (6 + 2)
+	{
+	case 7:printf("hi");
+	case 8:printf("bye");
+	
+	case 20:printf("goodbye");
+	break;
+	case 22:printf("hello");
+
+	}
+}
+//bye goodbye
+-========================================================
+
+#include <stdio.h>
+int main()
+{
+	switch (6 >2)
+	{
+	case 0:printf("hi");
+	case 1:printf("bye");
+	}
+	
+}
+//bye
+====================================================
+#include <stdio.h>
+int main()
+{
+	switch (6 >2)
+	{
+	case 1:printf("hi");
+		break;//takes the control outside the block
+	case 0:printf("bye");
+	}
+
+}
+//hi
+================================================
+
+#include <stdio.h>
+int main()
+{
+	switch (6 >2)
+	{
+	case 1:printf("hi");
+	case 0:printf("bye");
+	}
+
+}
+//hi bye
+=============================================
+
+
+#include <stdio.h>
+int main()
+{
+	switch (1&&1)
+	{
+	case 1:printf("hi");
+		break;//takes the control outside the block
+	case 0:printf("bye");
+	}
+}
+//hi
+==========================================
+
+#include <stdio.h>
+int main()
+{
+	switch (5)
+	{
+	case 5:printf("hi");
+		
+	case 1:printf("bye");
+	
+	case 2:printf("goodbye");
+	}
+
+	
+}
+//hi bye goodbye
+=============================================
+#include <stdio.h>
+int main()
+{
+	switch ('z')
+	{
+	case 'z':printf("hi");
+	break;	
+	case 'Z':printf("bye");
+	}
+}
+//hi
+==============================================
+
+#include <stdio.h>
+int main()
+{
+	char a = 'A';
+	switch (a)
+	{
+	case 65:printf("hi");
+	
+	case 0:printf("bye");
+
+	}
+}
+//hi bye
+==========================================
+#include <stdio.h>
+int main()
+{
+	char a = 'A';
+	switch (a)
+	{
+	case 66:printf("hi");
+	case 0:printf("bye");
+	}
+
+}
+o/p-->no output
+==========================================
+
+#include <stdio.h>
+int main()
+{
+	char a = 'A';
+	switch (a)
+	{
+	
+	case 66:printf("hi");
+	case 0:printf("bye");
+	default:printf("invalid case value");
+
+	
+
+	}
+}
+
+
+
+
+//invalid case value
+==========================================
+#include <stdio.h>
+int main()
+{
+	
+	switch (1)
+	{
+	case 66:printf("hi");
+	case 1&&1:printf("bye");
+	default:printf("invalid case value");
+
+	}
+}
+
+//bye invalid case value
+===========================================
+#include <stdio.h>
+int main()
+{
+	
+	switch (1)
+	{
+	case 66:printf("hi");
+	case 6>1:printf("bye");
+	default:printf("invalid case value");
+
+	}
+}
+o/p-->bye invalid case value
+
+=========================================
+
+#include <stdio.h>
+int main()
+{
+	
+	switch (1)
+	{
+	case 66:printf("hi");
+	case 'B':printf("bye");
+		break;
+	default:printf("invalid case value");
+
+	}
+}
+//error
+=======================================
+#include <stdio.h>
+int main()
+{
+	float a=1;
+	switch (a)
+	{
+	case 1:printf("hi");
+	case 'b':printf("bye");
+		break;
+	default:printf("invalid case value");
+
+	}
+}
+o/p-->//error
+==========================================================
+	
+#include<stdio.h>
+int main()
+{
+	int a,b,res,ch;
+	printf("MENU\n");
+	printf("1.ADD\n2.SUB\n3.DIV\n4.MULT\n");
+	printf("enter the value of a and b\n");
+	scanf("%d%d",&a,&b);
+	printf("enter choice\n");
+	scanf("%d",&ch);//1
+	switch(ch)
+	{
+	
+	case 1:res=a+b;
+		break;
+	case 2:res=a-b;
+		break;
+	case 3:res=a/b;
+		break;
+	case 4:res=a*b;
+		
+	}
+	printf("result=%d",res);
+}
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+LOOPS::
+when a certain task/statements is need to be repeated a number of times,loop should be used.
+The looping can be defined as repeating the same process multiple times until a specific condition satisfies.
+
+ex: if we need to print the first 10 natural numbers then, instead of using the printf statement 10 times, we can print inside a loop which runs up to 10 iterations.
+
+ADV OF LOOPS
+1)Loops in programming are used to repeat a block of code until the specified condition is meet. A loop statement allows programmers to execute a statement or group of statements multiple times without repetition of code.
+2)provides reusability
+
+There are 2 types of loops
+
+a)pretested loop/entry control loop
+
+First condition is checked,if condition is true then statements inside loop will get execute,if condition is false then statements inside loop will not get execute
+ex:for,while
+
+b)post-tested loop/exit control loop
+First the statements inside loop will get execute atleast once,then the condition will get check,if condition is true then the statents inside loop will get execute otherwise it will get skipped.
+ex:do-while loop
+=========================================================================================
+for loop in C
+The for loop is used in the case where we need to execute some part of the code until the given condition is satisfied. The for loop is also called as a per-tested loop. It is better to use for loop if the number of iteration is known in advance.
+
+The syntax of for loop in c language is given below:
+
+for(initialization;condition;incr/decr){  
+//code to be executed  
+}  
+when no of iterations is already known to the user at that time it is feasible/approachable to use for loop
+iteration-->how many times the control will enter inside loop
+
+#include<stdio.h>
+int main()
+{
+	int a;
+	for (a = 1; a <= 10; a++)
+	{
+		printf("%d\t", a);
+	}
+}
+==============================================
+
+#include<stdio.h>
+int main()
+{
+	int a=1;
+	for (; a <= 10; )
+	{
+		printf("%d\t", a);
+		a++;
+	}
+}
+=====================================================
+#include<stdio.h>
+int main()
+{
+	int a;
+	for (a = 1; a <= 20; a++)
+	{
+		if(a%2==0)//if(a%2!=1)  // if(!(a%2==1))
+		printf("%d\t", a);
+	}
+}
+==============================================================
+#include<stdio.h>
+int main()
+{
+	int a;
+	for (a = 65; a <= 90; a++)
+	{
+		
+		printf("%c\t", a);
+	}
+}
+==========================================================
+#include<stdio.h>
+int main()
+{
+	char a;
+	for (a = 'A'; a <= 'Z'; a++)
+	{
+		
+		printf("%c\t", a);
+	}
+}
+===========================================
+#include<stdio.h>
+int main()
+{
+	int a;
+	for (a=65;a<=90;a=a+2)
+	{
+		
+		printf("%d\t",a);
+	 } 
+}
+=====================================================
+5*1=5
+5*2=10
+
+5*10=50
+
+#include<stdio.h>
+int main()
+{
+	int num,i;
+	printf("enter number\n");
+	scanf("%d", &num);//5
+	for (i = 1; i <= 10; i++)
+	{
+		printf("%d * %d = %d\n", num, i, num * i);
+	}
+}
+
+//H.W
+num-->5
+5*2=10
+5*4=20
+5*6=30
+5*8=40
+5*10=50
+
+==========================================================
+1+2+3+4+-----------10 =====>55
+#include<stdio.h>
+int main()
+{
+	int i, sum=0;
+	for (i = 1; i <= 10; i++)
+	{
+		sum =sum + i;
+	}
+	printf("summation=%d", sum);//55
+	
+	
+}
+======================================================
+
+
+1*2*3*4-------------10=======>
+#include<stdio.h>
+int main()
+{
+	int i, mult=1;
+	for (i = 1; i <= 10; i++)
+	{
+		mult =mult * i;
+	}
+	printf("multiplication=%d", mult);
+	
+	
+}
+========================================================
+3!--->1*2*3
+4!-->1*2*3*4
+num!-->1*2*3----num
+
+num=6
+for(i=1;i<=num;i++)
+{
+		fact=1*2*3*4*5*6;
+
+}
+
+
+#include<stdio.h>
+int main()
+{
+	int num, i, fact = 1;
+	printf("enter number\n");
+	scanf("%d", &num);
+	for (i = 1; i <= num; i++)
+	{
+		fact = fact * i;
+	}
+
+	printf("factorial=%d", fact);
+}
+
+
+===========================================================
+#include<stdio.h>
+int main()
+{
+	int i;
+	for (i = 1; i <= 10; i++)
+	{
+		if (i == 5)
+		break;//takes the control outside the block/loop
+		printf("%d\t", i);
+	}
+
+}
+=======================================================================
+#include<stdio.h>
+int main()
+{
+	int num, i;
+	printf("enter number\n");
+	scanf("%d", &num);
+	for (i = 1; i <= 10; i++)
+	{
+		if (i == num)
+		break;
+		printf("%d * %d = %d\n", num, i, num * i);
+	}
+
+}
+======================================================================
+#include<stdio.h>
+int main()
+{
+	int i;
+	for (i = 1; i <= 10; i++)
+	{
+		if (i == 5)
+		continue;//skips the iteration that satisfies the condition and 
+		//control jumps to the next iteration
+		printf("%d\t", i);
+	}
+}
+
+//wap to print even numbers between 1 to 20 using continue keyword
+
+#include<stdio.h>
+int main()
+{
+	int i;
+	for (i = 1; i <= 20; i++)
+	{
+		if (i%2==1)
+			continue;
+		printf("%d\t", i);
+	}
+}
+
+
+
+
+#include<stdio.h>
+int main()
+{
+	int i, j;
+	for (i = 1, j = 5 ; i <= 5 && j != 2; i++, j--)
+	{
+		printf("%d %d\n", i, j); 
+	}
+}
+
+
+c.w
+//wap to print addition of even and odd number between 1 to 20
+#include<stdio.h>
+int main()
+{
+	int i,sum_e=0,sum_o=0;
+	for (i = 1; i <= 20; i++)
+	{
+		if (i % 2 == 0)
+		{
+			sum_e = sum_e + i;
+		}
+		else
+		{
+			sum_o = sum_o + i;
+		}
+	}
+	printf("%d  %d", sum_e, sum_o);
+}
+
+c.w
+//accept 5 marks each for 5 students and display there respective averages
+
+#include<stdio.h>
+int main()
+{
+	int student, m1, m2, m3, m4, m5, sum;
+	float avg;
+	for (student = 1; student <= 5; student++)
+	{
+		printf("enter 5 marks\n");
+		scanf("%d%d%d%d%d", &m1, &m2, &m3, &m4, &m5);
+		sum = m1 + m2 + m3 + m4 + m5;
+		avg = (float)sum / 5;
+		printf("average of %d student is %f\n", student, avg);
+	}
+}
+
+c.w
+2 5 8 11
+#include<stdio.h>
+int main()
+{
+	int i;
+	for (i = 2; i <= 20; i+=3)//i=i+3
+	{
+	
+		printf("%d\t", i);
+	}
+}
+
+c.w---> 5 10 15 20 25
+=================================
+
+#include<stdio.h>
+int main()
+{
+	for(;1;)//condition-->1--->nonzero---->true--
+	{
+		printf("hi");
+	}
+}
+
+==================================
+#include<stdio.h>
+int main()
+{
+	for(;'A';)
+	{
+		printf("hi");
+	}
+}
+====================================
+#include<stdio.h>
+int main()
+{
+	for(;-5;)
+	{
+		printf("hi");
+	}
+}
+===================================
+#include<stdio.h>
+int main()
+{
+	for(;0;)
+	{
+		printf("hi");
+	}
+}
+============================================
+#include<stdio.h>
+int main()
+{
+	for(;;)//if condition is not given then by default condition is true
+	{
+		printf("hi");
+	}
+}
+============================================
+C.W -->
+BASE 2 EXP 3  POWER--->8
+
+POW=2*2*2
+
+#include <stdio.h>
+
+int main()
+{
+    int base, exponent, i, power = 1;
+    printf("Enter base");
+    scanf("%d", &base);
+    printf("Enter exponent");
+    scanf("%d", &exponent);
+
+    for(i=1; i<=exponent; i++)
+    {
+        power = power * base;
+    }
+
+    printf("%d", power);
+
+}
+
+================================================================
+#include <stdio.h>  
+#include <math.h>  
+int main ()  
+{  
+   
+int base, exp;  
+int result; 
+printf (" Enter the base value from the user: ");  
+scanf (" %d", &base);   
+printf (" Enter the power value for raising the power of base: ");  
+scanf (" %d", &exp);  
+result = pow ( base, exp);  
+printf (" %d to the power of %d is %d",base,exp, result);
+}
+
+===============================================
+while loop in C
+The while loop in c is to be used in the scenario where we don't know the number of iterations in advance. The block of statements is executed in the while loop until the condition specified in the while loop is satisfied. It is also called a pre-tested loop.
+ex-->display 1st 25 prime numbers
+
+SYNTAX:
+
+	initilization;
+	while(condition/expression)
+	{
+	  //block of stat;
+	  //incre/decre;
+	}
+
+#include<stdio.h>
+int main()
+{
+	int i = 1;
+	while (i <= 20)
+	{
+		if (i % 2 == 0)
+			printf("%d\t", i);
+		i++;
+	}
+}
+
+Armstrong number( 0 to 999)
+
+153
+1*1*1 +  5*5*5 + 3*3*3 
+1+125+27
+153
+
+370
+371
+407
+0
+1
+
+
+
+
+#include<stdio.h>
+int main()
+{
+	int num, rem, sum = 0, orgnum;
+	printf("enter number\n");
+	scanf("%d", &num);
+	orgnum = num;
+	while (num != 0)
+	{
+		rem = num % 10;
+		num = num / 10;
+		sum = sum + rem * rem * rem;
+	}
+	if (sum == orgnum)
+		printf("%d is armstrong", orgnum);
+	else
+		printf("%d is not armstrong", orgnum);
+
+}
+
+#include<stdio.h>
+int main()
+{
+	int num, rem, sum = 0, orgnum;
+	printf("enter number\n");
+	scanf("%d", &num);
+	orgnum = num;
+	 for(;num != 0;)
+	{
+		rem = num % 10;
+		num = num / 10;
+		sum = sum + rem * rem * rem;
+	}
+	if (sum == orgnum)
+		printf("%d is armstrong", orgnum);
+	else
+		printf("%d is not armstrong", orgnum);
+
+}
+
+-===========================================================
+//accept a number from the user and display whether that number is prime number 
+or not
+the number which is only divisible by 1 and itself is called as prime number
+
+5 --->2 3 4
+6-->2 3 4 5
+
+#include<stdio.h>
+int main()
+{
+	int num, i = 2;
+	printf("enter number\n");
+	scanf("%d", &num);
+
+	while (i <num) // i<=num-1
+	{
+		if (num % i == 0)
+			break;
+		i++;
+	}
+	if (i == num)
+		printf("prime");
+	else
+		printf("not prime");
+}
+
+#include<stdio.h>
+int main()
+{
+	int num, i;
+	printf("enter number\n");
+	scanf("%d", &num);
+	for(i=2;i < num;i++)
+	{
+		if (num % i == 0)
+			break;
+	
+	}
+	if (i == num)
+		printf("prime");
+	else
+		printf("not prime");
+}
+======================================================
+n=?//n=8
+0 1 1 2 3 5 8 13  -----------
+
+#include<stdio.h>
+int main()
+{
+	int n,i=3;
+	int n1=0,n2=1,n3;
+	printf("enter no of terms\n");
+	scanf("%d",&n);//8
+	printf("%d %d\t",n1,n2);
+	while(i<=n)
+	{
+		n3=n1+n2;//1
+		printf("%d\t",n3);
+		n1=n2;
+		n2=n3;
+		i++;
+	}
+}
+
+do-while loop in C
+The do-while loop continues until a given condition satisfies. It is also called post tested loop. It is used when it is necessary to execute the loop at least once (mostly menu driven programs).
+
+The syntax of do-while loop in c language is given below:
+  
+initilization;
+do
+{
+	//block of statements;
+	//incre/decre;
+}while(condition);
+
+#include<stdio.h>
+//wap to add numbers untill the user enters 0 using do-while loop
+int main()
+{
+	int num, sum = 0;
+	do
+	{
+		printf("enter number\n");
+		scanf("%d", &num);
+		sum = sum + num;
+	} while (num != 0);
+	printf("summation=%d", sum);
+}
+
+============================================================================
+Nested loop
+one loop is a part of another loop is called as nested loop. Nesting of loops is the feature in C that allows the looping of statements inside another loop. 
+
+Any number of loops can be defined inside another loop, i.e., there is no restriction for defining any number of loops. The nesting level can be defined at n times. You can define any type of loop inside another loop
+
+Nested for loop
+one for loop is a part of another for loop is called as nested for loop
+- - - - - - - - - - - - - - - ------------------------------------------------
+Working of nested for loop
+For one value of outer for(row) loop,inner for loop (col) executes completely.
+
+#include<stdio.h>
+int main()
+{
+	int row,col;
+	for(row=1;row<=3;row++)
+	{
+		for(col=1;col<=3;col++)
+		{
+			printf("%d%d\t",row,col);//11 12 13
+									 //21 22 23
+									//31 32 33
+		}
+		printf("\n");
+	}
+	
+}
+============================================================
+* * *
+* * *
+* * *
+
+#include<stdio.h>
+int main()
+{
+	int row,col;
+	for(row=1;row<=3;row++)
+	{
+		for(col=1;col<=3;col++)
+		{
+			printf("*\t");
+		}
+		printf("\n");
+	}
+	
+}
+============================================================
+
+5*1=5
+|
+|
+5*10=50
+******************
+6*1=6
+|
+|
+6*10=60
+*****************
+10*1=10
+|
+|
+10*10=100
+*****************
+
+#include<stdio.h>
+int main()
+{
+	int i,j;
+	for (i=5;i<=10;i++)
+	{
+		for(j=1;j<=10;j++)
+
+		{
+			printf("%d * %d = %d\n",i,j,(i*j));
+			//inner for loop will execute no of rows * col times
+			//60 times
+		}
+		printf("\n-------------------------------------------\n");
+		//outer for loop will execute no of rows times
+		//6 times
+	}
+	- 
+}
+#include<stdio.h>
+/*
+
+*
+**
+***
+****
+
+*/
+
+int main()
+{
+	int row,col;
+	for(row=1;row<=4;row++)
+	{
+		for(col=1;col<=row;col++)
+		{
+			printf("*\t");
+		}
+		printf("\n");
+	}
+	
+}
+
+-----------------------------------------------------------
+1
+12
+123
+1234
+12345
+
+int main()
+{
+	int row, col;
+	for (row = 1; row <= 5; row++)
+	{
+		for (col = 1; col <= row; col++)
+		{
+			printf("%d\t", col);
+		}
+		printf("\n");
+	}
+}
+
+=========================================================
+1
+22
+333
+4444
+55555
+
+#include<stdio.h>
+int main()
+{
+	int row,col;
+	for(row=1;row<=4;row++)
+	{
+		for(col=1;col<=row;col++)
+		{
+			printf("%d\t",row);
+		}
+		printf("\n");
+	}
+	
+}
+			OR
+
+
+#include<stdio.h>
+
+int main()
+{
+	int row, col,num=1;
+	for (row = 1; row <= 5; row++)
+	{
+		for (col = 1; col <= row; col++)
+		{
+			printf("%d\t",num);
+		}
+		num++;
+		printf("\n");
+	}
+}
+
+
+==============================================================
+
+FLOYD'S TRIANGLE
+1
+2 3
+4 5 6
+7 8 9 10
+
+int main()
+{
+	int row, col,num=1;
+	for (row = 1; row <= 4; row++)
+	{
+		for (col = 1; col <= row; col++)
+		{
+			printf("%d\t", num);
+			num++;
+		}
+		printf("\n");
+	}
+}
+===============================================================
+===============================================
+#include<stdio.h>
+/*
+A
+BB
+CCC
+DDDD
+EEEEE
+*/
+int main()
+{
+	int row,col;
+	char ch='A';
+	for(row=1;row<=5;row++)
+	{
+		for(col=1;col<=row;col++)
+		{
+			printf("%c",ch);
+			
+		}
+		ch++;
+		printf("\n");
+	}
+}
+==============================================
+A
+BC
+DEF
+GHIJ
+KLMNO
+int main()
+{
+	int row,col;
+	char ch='A';
+	for(row=1;row<=5;row++)
+	{
+		for(col=1;col<=row;col++)
+		{
+			printf("%c",ch);
+			ch++;
+			
+		}
+		printf("\n");
+	}}
+----------------------------------------------------------------
+
+*****
+****
+***
+**
+*
+int main()
+{
+	int row,col;
+	for(row=5;row>=1;row--)
+	{
+		for(col=1;col<=row;col++)
+		{
+			printf("*\t");
+			
+		}
+		printf("\n");
+	}
+}
+==================================================================
+
+AAAAA
+BBBB
+CCC
+DD
+E
+
+int main()
+{
+	int row,col;
+	char ch='A';
+	for(row=5;row>=1;row--)
+	{
+		for(col=1;col<=row;col++)
+		{
+			printf("%c\t",ch);
+			
+		}
+		ch++;
+		printf("\n");}}
+=================================================================
+ABCDE
+FGHI
+JKL
+MN
+O
+
+int main()
+{
+	int row,col;
+	char ch='A';
+	for(row=5;row>=1;row--)
+	{
+		for(col=1;col<=row;col++)
+		{
+			printf("%c\t",ch);
+				ch++;
+			
+		}
+	
+		printf("\n");}}
+
+=================================================================
+1
+10
+101
+1010
+10101
+
+int main()
+{
+	int row,col;
+	for(row=1;row<=5;row++)
+	{
+		for(col=1;col<=row;col++)
+		{
+			printf("%d\t",col%2);
+			
+		}
+		printf("\n");
+	}
+	
+}
+============================================================
+//break-->takes the control to the next row
+//continue-->takes the control to the next col
+int main()
+{
+	int row,col;
+	for(row=1;row<=3;row++)
+	{
+		for(col=1;col<=3;col++)
+		{
+			if(row==col)
+			break;
+			printf("%d%d\t",row,col);
+		}
+
+		printf("\n");
+	}
+}
+
+//break-->takes the control to the next row
+//continue-->takes the control to the next col and skips the satisfied iteration
+int main()
+{
+	int row,col;
+	for(row=1;row<=3;row++)
+	{
+		for(col=1;col<=3;col++)
+		{
+			if(row==col)
+			continue;
+			printf("%d%d\t",row,col);
+		}
+		printf("\n");
+	}
+}
+
+
+
+
+int main()
+{
+	int row,col;
+	for(row=1;row<=3;row++)
+	{
+		for(col=1;col<=3;col++)
+		{
+			if(col%2==0)
+			break;
+			printf("%d%d\t",row,col);
+		}
+		printf("\n");
+	}
+	
+}
+
+int main()
+{
+	int row,col;
+	for(row=1;row<=3;row++)
+	{
+		for(col=1;col<=3;col++)
+		{
+			if(col%2==0)
+			continue;
+			printf("%d%d\t",row,col);
+		}
+		printf("\n");
+	}
+	
+}
+===========================================================================
+Function
+==>function is a block of statements which does some predefined task,i.e some predefined task is assigned to the function and whenever the function is called,the function has to performed predefined task.
+==>A function in C is a set of statements that when called perform some specific task. It is the basic building block of a C program that provides modularity and code reusability.
+
+adv
+1)By using functions, we can avoid rewriting same logic/code again and again in a program.
+2)We can call C functions any number of times in a program and from any place in a program.
+3)Reusability is the main achievement of C functions.
+4)readability increases
+5)modularity can be achieved
+
+Types of Functions
+There are two types of functions in C programming:
+
+Library Functions/predefined function:
+==>function whose functionality is already predefined and as a user you cannot change functionality of that function .
+==>The predefined functions declared in the C header files such as scanf(), printf()..
+==>we need to include headerfile in our program.
+
+User-defined functions: 
+==>function whose functionality is given by programmer
+
+Function Aspects
+There are three aspects of a C function.
+
+Function declaration: It tells the compiler about the function name, function signature(no of arguments,sequence of argument,datatype of argument), and return type.
+
+Function call: Function can be called from anywhere in the program. The parameter list must not differ in function calling and function declaration. 
+
+Function definition It contains the actual statements which are to be executed. It is a block of statements where the task/logic of the function is implemented.
+
+C function aspects											Syntax
+1	Function declaration							return_type function_name (argument list);
+2	Function call									function_name (argument_list);
+3	Function definition								return_type function_name (argument list) {function body;}
+
+========================================================================
+int main()
+{
+	int a,b,c,d;
+	printf("accept inputs\n");
+	int res=scanf("%d%d%d%d",&a,&b,&c,&d);
+	printf("no of inputs accepted is %d",res);
+}
+
+Different aspects of function calling
+
+A function may or may not accept any argument. It may or may not return any value. Based on these facts, There are four different aspects of function calls.
+
+function without arguments and without return value
+function without arguments and with return value
+function with arguments and without return value
+function with arguments and with return value
+
+=====================================================================
+===========
+case 1 :  
+function with arguments and without return value
+
+#include<stdio.h>
+//returntype functionname(datatypes);//function declaration/prototype
+void add(int,int);
+int main()
+{
+	int a, b;
+	printf("enter value of a and b\n");
+	scanf("%d%d", &a, &b);
+	add(a, b);//function calling
+	printf("\nend of main");	
+}
+/* returntype functionname(datatype argumentname)
+{
+}*/
+void add(int p, int q)//function defination
+{
+	int r = p + q;
+	printf("result=%d", r);
+	
+}
+
+=====================================================================
+
+case 2 :  function with arguments and with return value
+#include<stdio.h>
+int add(int,int);
+int main()
+{
+	int a,b,r;
+	printf("enter value of a and b\n");
+	scanf("%d%d",&a,&b);
+	r=add(a,b);//function calling
+	printf("result=%d",r);
+	printf("\nend of main()");
+}
+int add(int a, int b)//function defination
+{
+	int r=a+b;
+	return r;
+}
+
+
+case 3 :  function without arguments and with return value
+
+#include<stdio.h>
+int add();
+int main()
+{	
+printf("result=%d",add();//function calling
+		printf("\nend of main()");
+}
+int add(void)//function defination
+{
+	int p,q,r;
+	printf("enter value of p and q\n");
+	scanf("%d%d",&p,&q);
+	r=p+q;
+	return r;
+}
+
+case 4 :  function without arguments and without return value
+
+#include<stdio.h>
+void add();
+int main()
+{	
+	add();//function calling
+}
+void add()//function defination
+{
+	int p,q,r;
+	printf("enter value of p and q\n");
+	scanf("%d%d",&p,&q);
+	r=p+q;
+	printf("result=%d",r);
+}
+
+-----------------------------------------------------------------------------------------
+case 1 :  function with arguments and without return value
+
+#include<stdio.h>
+void area_c(int);
+int main()
+{
+	int radius;
+	printf("enter radius\n");
+	scanf("%d", &radius);
+	area_c(radius);
+
+}
+void area_c(int r)
+{
+	float area = 3.142f * r * r;
+	printf("area of circle=%f", area);
+}
+
+
+case 2 :  function with arguments and with return value
+
+#include<stdio.h>
+float area_c(int);
+int main()
+{
+	int radius;
+	float area;
+	printf("enter radius\n");
+	scanf("%d", &radius);
+	area=area_c(radius);
+	printf("area=%f", area);
+}
+float area_c(int r)
+{
+	float area = 3.142f * r * r;
+	return area;
+}
+
+case 3 :  function without arguments and with return value
+
+
+#include<stdio.h>
+float area_c();
+int main()
+{
+	float area=area_c();
+	printf("area=%f", area);
+}
+float area_c()
+{
+	int r;
+	printf("enter radius\n");
+	scanf("%d", &r);
+	float area = 3.142f * r * r;
+	return area;
+}
+
+case 4 :  function without arguments and without return value
+#include<stdio.h>
+void area_c();
+int main()
+{
+	area_c();
+	
+}
+void area_c(void)
+{
+	int r;
+	printf("enter radius\n");
+	scanf("%d", &r);
+	float area = 3.142f * r * r;
+	printf("area=%f", area);
+}
+==================================================================
+
+#include <stdio.h>
+int show();
+int main()
+{   
+		int x= show();
+		printf("%d",x);
+
+}
+int show()
+{
+	return 100;
+}
+------------------------------------------------------
+
+#include <stdio.h>
+int show();
+int main()//calling function
+{   
+		printf("%d", show());
+
+}
+int show()//called function
+{
+	return 10 ;//control+value is return
+	printf("hello");
+}
+
+//the statments after return will never get executed
+//output-->10
+--------------------------------------------------------
+#include <stdio.h>
+int show();
+int main()//calling function
+{   
+		printf("%d", show());
+}
+int show()//called function
+{
+	return 10,20;
+}
+//only 1 value can be returned from called function to the calling in function,value will be stored on stack section which works in LIFO manner thats why 20 will be returned to the calling function 
+-------------------------------------------------------------------
+#include <stdio.h>
+//wap to print whether the number is even or odd by returning value 1 and 0 respectively
+#include<stdio.h>
+int show(int);
+int main()//calling function
+{ 
+	int number;
+	printf("enter number\n");
+	scanf("%d",&number);
+	int x=show(number);
+	(x==1)?printf("even"):printf("odd");
+}
+int show(int num)
+{
+return	(num%2==0)?  1: 0;
+}
+
+-------------------------------------------------------
+Call by value in C
+In call by value method, the value of the actual parameters is copied into the formal parameters. In other words, In call by value, different memory is allocated for actual and formal parameters since the value of the actual parameter is copied into the formal parameter.
+The actual parameter is the argument which is used in the function call whereas formal parameter is the argument which is used in the function definition.
+
+Limitations of pass by value
+
+1)changes made to the actual argument doesnot reflect on formal argument and viceversa
+#include <stdio.h>
+void swap(int,int);
+void main()
+{
+	int a=10,b=20;
+	printf("before calling swap()\n");
+	printf("value of a and b is %d %d\n",a,b);
+	swap(a,b);//actual argument	
+	printf("after calling swap()\n");
+	printf("value of a and b is %d %d\n",a,b);
+}
+void swap(int p,int q)//formal argument
+{
+	int temp;
+	temp=p;
+	p=q;
+	q=temp;
+	printf("after swapping\n");
+	printf("value of p and q is %d %d\n",p,q);
+	return p,q;
+	
+}
+
+2)only 1 value can be returned from called function to the calling fun
+
+To remove limitations of pass by value,pass by address is used..
+
+Call by address in C
+In call by address, the address of the variable is passed into the function call as the actual parameter.
+The value of the actual parameters can be modified by changing the formal parameters since the address of the actual parameters is passed.
+In call by address, the memory allocation is similar for both formal parameters and actual parameters. All the operations in the function are performed on the value stored at the address of the actual parameters, and the modified value gets stored at the same address.
+
+Pass by address
+
+#include <stdio.h>
+void swap(int*,int*);
+void main()
+{
+	int a=10,b=20;
+	printf("before swapping\n");
+	printf("value of a and b is %d %d\n",a,b);
+	swap(&a,&b);	
+	printf("after swapping\n");
+	printf("value of a and b is %d %d\n",a,b);
+}
+void swap(int* p,int* q)
+{
+	int temp;
+	temp=*p;
+	*p=*q;
+	*q=temp;
+	printf("after swapping\n");
+	printf("value of *p and *q is %d %d\n",*p,*q);
+}
+---------------------------------------------
+#include <stdio.h>
+void square(int);
+void main()
+{
+	int a=10;
+	square(a);
+	printf("square value of a is %d",a);
+}
+void square(int p)
+{
+	
+	p=p*p;
+}
+======================================
+#include <stdio.h>
+void square(int*);
+void main()
+{
+	int a=10;
+	square(&a);
+	printf("square value of a is %d",a);
+}
+void square(int* p)
+{
+	*p=*p * *p;
+	
+}
+---------------------------
+#include<stdio.h>
+void area_r(int len,int bre,int * a);
+void  peri_r(int len,int bre,int * p);
+
+int main()
+{
+	int len=3,bre=3;
+	int area,peri;
+	 area_r(len,bre,&area);
+	printf("area of rec is %d",area);
+	 peri_r(len,bre,&peri);
+	printf("perimeter of rec is %d",peri);
+}
+void area_r(int len,int bre,int * a)
+{
+	*a=len*bre;
+}
+void  peri_r(int len,int bre,int * p)
+{
+	*p=2*(len+bre);
+}
+=============================================================================
+POINTERS
+
+1)pointer is a variable which stores the address of another variable.
+2)size of every type of pointer on 16 bit is 2 bytes and on 32 bit is 4 bytes and
+on 64 bit is 8 bytes..
+3)type of pointer and type of variable should be same.
+4)dereferncing operator(*) return the value of a variable pointed by pointer
+
+1)
+int x=10;
+x-->10-->int
+&x-->1000--->int*
+
+char y='A';
+y-->A-->char
+&y-->2000--->char*
+
+double num=1.1;
+num-->1.1--->double
+&num--->3000--->double*
+
+2)
+int num;//declaration of a variable in which value is stored
+int* num;////declaration of a pointer variable in which address is stored
+
+int ptr;////declaration of a variable in which value is stored
+int * ptr; //declaration of a pointer variable in which address is stored
+
+-----------------------------------------------------------------------------
+Integer Pointer
+--------------
+int a=10;
+//a--->10-->int
+//&a-->1000-->int*
+int* b =  &a;//1000-->int*
+
+OR
+int a=10; 
+int * b;
+b=&a;
+
+
+a=10   ------->
+&a=1000------->
+b=1000------>
+&b=2000-------
+*b=10-->dereferencing operator/indirection operator-->
+return the value of a variable pointed by pointer
+
+
+a==*b==10
+*b=5;
+a=? //a=5
+
+a=123
+*b=? //*b=123
+
+&a==b==1000
+----------------------------------------------------------------
+Character Pointer
+--------------
+char a='x';
+//a--->x-->char
+//&a-->1000-->char*
+char* b=&a;//1000-->char*
+
+a=x ------->
+&a=1000----->
+b=1000---->
+&b=2000-->
+*b=x-->dereferencing operator-->return the value of a variable pointed by pointer
+
+
+a==*b==X
+&a==b==1000
+
+
+========================================================================================
+Pointer to Pointer
+A pointer to pointer is a variable use to store the address of another pointer. Such pointer is known as a double pointer (pointer to pointer). The first pointer is used to store the address of a variable whereas the second pointer is used to store the address of the first pointer. 
+#include<stdio.h>  
+void main ()  
+{  
+    int a = 10;  
+    int *p;  
+    int **pp;   
+    p = &a; // pointer p is pointing to the address of a  
+    pp = &p; // pointer pp is a double pointer pointing to the address of pointer p  
+    printf("address of a: %d\n",p); // Address of a will be printed   
+    printf("value stored at p: %d\n",*p); // value stored at the address contained by p i.e. 10 will be printed  
+    printf("value stored at pp: %d\n",**pp); // value stored at the address contained by the pointer stored at pp  
+}  
+===========================================================================
+Array
+Array is a finite(countable) set of homogenous elements in which the elements are stored in a contignous/linear manner.
+
+Syntax for declaration of an array:
+datatype arrayname[size];
+int a[5];//a is an array allocating memory for 5 integer elements
+
+different ways of declaring and initilizing 1d(linear/1row-many col) array
+1)
+int marks[5];
+printf("%d",sizeof(marks));
+printf("%d",sizeof(marks[0]));
+
+2)
+int a[5]={1,2,3,4,5};
+printf("%d",sizeof(a));//5*4=20 bytes
+if size of array is N then array index will go till N-1
+printf("%d",a[0]);
+printf("%d",&a[0]);
+
+3)
+const int a[5]={1,2,3,4,30};
+int x=a[0]*5;//x=5-->allowed
+a[0]=10;//error
+
+4)
+int a[5]={1,2};//partial initilization of an array
+printf("%d %d %d",a[2],a[3],a[4]);
+
+5)	int b[]={1,3,6,8};
+	//16 bytes memory allocation will takes place
+	//1 3 6 8
+
+6)
+	int size=5
+	int a[size];
+	//error
+
+7) int a[4]={1,67,34,55,33};//error
+----------------------------------------------------------------------------------------
+#include<stdio.h>
+int main()
+{
+	int a[5],i;
+	printf("enter elements\n");
+	for(i=0;i<=4;i++)
+	scanf("%d",&a[i]);
+	for(i=0;i<=4;i++)
+	a[i]=a[i]*a[i];
+	printf("display elements\n");
+	for(i=0;i<=4;i++)
+	printf("%d\t",a[i]);
+}
+
+#include<stdio.h>
+//accept 5 elements
+//summation of 5 elements
+//display average
+int main()
+{
+	int a[5],i,sum=0;
+	float avg;
+	printf("enter elements\n");
+ 	for(i=0;i<=4;i++)
+	scanf("%d",&a[i]);
+
+	for(i=0;i<=4;i++)
+	sum=sum + a[i];
+
+	avg=(float)sum/5;
+	printf("average=%f",avg);
+}
+
+progno 3
+wap to copy the elements of one array into another array
+//declare 2 array
+//accept elements for 1 array
+//copy
+//display the copied elements
+
+#include<stdio.h>
+int main()
+{
+	int m[5]={1,2,3,4,5};
+	int i,a[5];
+	for(i=0;i<5;i++)
+	a[i]=m[i];
+	printf("display elements\n");
+	for(i=0;i<=4;i++)
+	printf("%d\t",a[i]);
+	
+}
+
+progno 4
+wap to display maximum number in an array
+#include<stdio.h>
+int main()
+{
+    int a[5],i,max;
+    printf("Enter elements in array : ");
+    for(i=0; i<5; i++)
+    {
+        scanf("%d",&a[i]);
+    }
+ max=a[0];
+    for(i=1; i<5; i++)
+    {         
+        if(a[i]>max)
+        max=a[i];
+    }
+   	printf("max of array is : %d",max);
+	 
+}
+
+prog 5
+wap to display minimum number in an array
+
+
+h.w
+accept elements of the array and store all the even numbers in the
+second array
+ 2 3 4 5 6 7
+#include<stdio.h>
+int main()
+{
+	int a[6],i,b[6],j;
+	printf("enter elements\n");
+	for(i=0;i<=5;i++)
+	scanf("%d",&a[i]);//2 3 4 5 6 7
+	for(i=0,j=0;i<=5;i++,j++)
+	{
+		if(a[i]%2==0)
+		{
+			b[j]=a[i];
+			printf("%d\t",b[j]);
+		}
+	}
+
+}
+---------------------------------------
+
+Name of the array itself is a constant pointer pointing to base address of an array
+
+int a[5]={1,2,3,4,5};
+a[0]-->1--->int
+&a[0]-->100-->int*
+
+ADDRESS
+1)SUBSCRIPT NOTATION(&ARRAYNAME[INDEX])
+&a[0]-->100
+&a[1]-->104
+&a[4]-->116
+
+2)POINTER NOTATION (ARRAYNAME/POINTERNAME + INDEX)
+(a+0)-->100    (0+a)
+(a+1)-->104    (1+a)
+(a+2)--->108   (2+a)
+(a+3)-->112    (3+a)
+(a+4)-->116    (4+a)
+
+
+&a[0]==(a+0)==(0+a)==a---------->100
+&a[4]==(a+4)==(4+a)------------->116
+&a[i]==(a+i)==(i+a)------------------------->ADDRESS
+
+VALUE
+1)SUBSCRIPT NOTATION(ARRAYNAME[INDEX])
+a[0]-->1  0[a]
+a[1]-->2  1[a]
+a[4]-->5  4[a]
+
+2)POINTER NOTATION *(ARRAYNAME/POINTERNAME + INDEX)
+*(a+0)-->*100 --> 1      *(0+a)
+*(a+1)-->*104--->2       *(1+a)
+*(a+2)--->*108-->3       *(2+a)
+*(a+3)-->*112-->4       *(3+a)
+
+ 
+a[0]==0[a]==*(a+0)==*(0+a)==*a---------->1
+a[4]==*(a+4)==4[a]==*(4+a)------------->5
+a[i]==*(a+i)==*(i+a)==i[a]---------------->VALUE
+
+#include<stdio.h>
+int main()
+{
+	int a[5],i,sum=0;
+	float avg;
+	printf("enter elements\n");
+	for(i=0;i<=4;i++)
+	scanf("%d",(a+i));//&a[i]
+	for(i=0;i<=4;i++)
+	a[i]=*(a+i) *  *(i+a);
+	printf("display elements\n");
+	for(i=0;i<=4;i++)
+	printf("%d\t",i[a]);
+}
+c .w
+solve above program using pointer notation
+
+POINTER ARITHMETIC OPERATIONS
+The following operations allowed on pointer
+1)Incrementing a pointer
+2)decrementing a pointer
+3)adding integer to a pointer
+4)subtracting integer from a pointer
+
+#include<stdio.h>
+int main()
+{
+	int a[5]={1,2,3,4,5};
+	//a++;//a=a+1 
+	int* b=a;//(a+0),(0+a),&a[0]
+	b++;
+	printf("%d\n",*b);
+	b--; 
+	printf("%d\n",*b);
+	b=b+3; 
+	printf("%d\n",*b);
+	b=b-3;
+	printf("%d",*b);
+
+}
+
+5)comparison of two pointers
+#include<stdio.h>
+int main()
+{
+	int a[5]={1,2,3,4,5};
+	int* b=a+4;
+	int*c =&a[4];
+	if(b==c)
+	printf("both pointer pointing to same loc1\n");
+	if(a==b)
+	printf("both pointer pointing to same loc2\n");
+	if(*b==*c)
+	printf("both pointer containing same value1\n");
+	if(*b==*a+4)
+	printf("equal");
+	
+}
+
+
+6)Assigning one pointer into another pointer
+int a[5]={1,2,3};
+int*b=a;
+
+7)subtraction of two pointers
+#include<stdio.h>
+int main()
+{
+	int a[5]={1,2,3,4,5};
+	int* b=(a+4);
+	printf("%d",b-a);
+	//116-100
+	//16 bytes
+	//16/4-->4 no of elements
+	//how many elements b pointer is apart from a pointer
+
+}
+
+The following operations are not allowed on pointers
+1)division of two pointers
+2)multiplication of two pointers
+3)addition of two pointers
+4)multiplying pointer with constant ex (a*4)
+5)dividing pointer with constant ex (a/4)
+
+-----------------------------------------------
+#include<stdio.h>
+int main()
+{
+	int a[5]={1,2,3,4,5};
+	int *b=&a[1];
+	b++;
+	printf("%d%d",a[1],b[1]);
+}
+
+=============================================================
+
+
+
+===================================================================
+STRING
+when group of character is stored in an  array  ,such array is called as string
+in string ,'\0'(null character) is appended by compiler at the end
+
+ASCII value of '\0' is 0
+
+char a[5]="pune";
+
+if size of the string is N then max no of characters i can store in string is 
+N-1
+char a[4]="pune";//error
+char a[5]="pune";//allowed
+
+
+#include<stdio.h>
+int main()
+{
+	//name of the string itself is a
+	//contant pointer pointing to
+	//base address of an array
+	char a[5]={"pune"};
+	//a[0]-->p-->char
+	//&a[0]-->100-->char*
+	
+---------------------------------------------
+#include<stdio.h>
+int main()
+{
+	char a[5]={"pune"};
+	char* b=a;//100-->char*
+	a++;//error--->constant pointer
+	b++;//allowed-->nonconstant pointer
+	
+}
+
+#include<stdio.h>
+int main()
+{
+	char a[5]={"pune"};
+	char* b=a;//100-->char*
+	printf("%c",b[1]);
+	printf("%c",*(b+3)+1);
+	printf("%d%c",3[b],b[3]);
+	printf("%c",*(a+2)+9/2);
+}
+
+
+
+#include<stdio.h>
+int main()
+{
+	char a[5]={"pune"};
+	char* b=a;//(a+0),(0+a),&a[0]
+	b++;//
+	printf("%c",b[1]);
+}
+
+
+-----------------------------------------------------
+char a[5]={"pune"};
+char* b=a;
+
+a[0]==b[0]==*a==*b==*(a+0)==*(0+a)==*(0+b)==*(b+0)==0[a]==0[b]========>p
+a[2]==b[2]==*(a+2)==*(2+a)==*(2+b)==*(b+2)==2[a]==2[b]========>n
+
+&a[0]==&b[0]==a==b==(a+0)==(0+a)==(0+b)==(b+0)========>100
+&a[2]==&b[2]==(a+2)==(2+a)==(2+b)==(b+2)========>102
+
+
+
+--------------------------------------------------------------------
+
+Structure
+
+1)structure is a collection of heterogenous datatype in which
+elements can be stored in a contignous manner
+
+//declaration of structure
+struct Student
+{
+	//members of the structure
+	int rollno;
+	char name[10];
+	char grade;
+};
+
+
+2)during declaration of structure,memory is not allocated to the members
+of the structure.
+
+3)memory is allocated at the time of creation of structure variable
+
+int a;
+
+//syntax for creation of structure variable
+struct structure_name structure_variablename;
+struct employee  a;//memory gets allocated for members of the structure
+
+how many bytes?
+summation of  datatypes of all members of the structure
+	struct employee e1;
+	//type of structurevariable e1 is struct structurename
+	printf("%d",sizeof(e1));//15 bytes
+	printf("%d",sizeof(struct employee));//15 bytes
+
+
+//sizeof(e1)==sizeof(struct employee)
+=======================================================================
+
+int a[5];
+int a;
+char a[5];
+int a[3][2];
+//declaration of structure
+struct employee
+{
+	int id;//members of structure
+	float sal;
+	char name[10];
+};
+
+struct book
+{
+	int bid;
+	char authorname[10];
+	float price;
+};
+
+=====================================================
+During declaration of structure, memory for members of the structure is not allocated therefore
+we cannot initlialize members of the structure during declaration
+#include<stdio.h>
+struct employee
+{
+	int id=1;//members of structure
+	float sal;
+	char name[10];
+};
+int main()
+{
+	
+}
+//error
+====================================================================
+
+
+
+rules
+structurevariable .
+pointer->
+use of & in scanf() in structure is mandatory
+[].
+()->
+
+wap to store record of 1 emp inside structure
+
+#include<stdio.h>
+struct employee
+{
+	int id;
+	float sal;
+	char name[10];
+};
+int main()
+{
+	struct employee e1,e2={102,60000.00,"rohan"},e3;
+	printf("accept data for employee no e1\n");
+	scanf("%d%f%s",&e1.id,&e1.sal,&e1.name);
+	printf("%d %f %s\n",e1.id,e1.sal,e1.name);
+	e3=e2;//entire structure get copied into another structure
+	//only if both structure variable should be of same type
+	printf("%d %f %s",e3.id,e3.sal,e3.name);
+	
+	
+}
+
+Array of structure
+To hold number of records of same type,array of structure is used.
+
+#include<stdio.h>
+struct employee
+{
+	int id;
+	float sal;
+};
+int main()
+{
+	int a[3];//a is an array containing 3 elements of type integer
+	struct employee e[3];//e is an array containing 3 structure of type employee
+	int i;
+	printf("accept details\n");
+	for (i = 0; i <= 2; i++)
+	{
+		scanf("%d%f", &e[i].id, &e[i].sal);
+	}
+	printf("display details\n");
+	for (i = 0; i <= 2; i++)
+	{
+		printf("%d %f\n", e[i].id, e[i].sal);
+	}
+	//printf("%d", sizeof(e));//24 bytes
+	//printf("%d", sizeof(e[0]));//8 bytes
+	
+}
+==============================================================
+we cannot declare function inside structure declaration
+#include<stdio.h>
+struct employee
+{
+	int id;
+	float sal;
+	void accept();//error
+};
+int main()
+{
+}
+
+===================================================================
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
